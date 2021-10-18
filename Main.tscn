@@ -1,0 +1,441 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Assets/índice3.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/índice4.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/índice8.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/índice5.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/índice6.jpg" type="Texture" id=5]
+[ext_resource path="res://Assets/índice7.jpg" type="Texture" id=6]
+[ext_resource path="res://Assets/índice12.jpg" type="Texture" id=7]
+[ext_resource path="res://Assets/índice10.jpg" type="Texture" id=8]
+[ext_resource path="res://Assets/índice14.jpg" type="Texture" id=9]
+[ext_resource path="res://Assets/índice11.jpg" type="Texture" id=10]
+[ext_resource path="res://Assets/capa.jpeg" type="Texture" id=11]
+[ext_resource path="res://Assets/erro.jpg" type="Texture" id=12]
+[ext_resource path="res://Assets/índice2.jpg" type="Texture" id=13]
+[ext_resource path="res://Assets/índice9.jpg" type="Texture" id=14]
+[ext_resource path="res://Scripts/Sequencias.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/GerarResultado.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/VisibilidadeProdutos.gd" type="Script" id=17]
+[ext_resource path="res://Tema.tres" type="Theme" id=18]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 16 )
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.717647, 0.0666667, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inicio" type="TextureRect" parent="CanvasLayer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniciarBotão" type="TextureButton" parent="CanvasLayer/Inicio"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SequenciaPeleOleosa" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = -1
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resultado" type="ScrollContainer" parent="CanvasLayer/SequenciaPeleOleosa"]
+margin_right = 904.0
+margin_bottom = 1280.0
+theme = ExtResource( 18 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SequenciaPeleOleosa/Resultado"]
+margin_right = 904.0
+margin_bottom = 2559.0
+custom_constants/separation = -1
+
+[node name="1" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Theracne Gel Botão" type="TextureButton" parent="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1"]
+margin_left = 349.0
+margin_top = 874.0
+margin_right = 535.0
+margin_bottom = 1151.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Theracne Sabonete Botão" type="TextureButton" parent="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1"]
+margin_left = 584.0
+margin_top = 883.0
+margin_right = 789.0
+margin_bottom = 1111.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VoltarResultado" type="TextureButton" parent="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1"]
+margin_right = 115.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer"]
+margin_top = 1279.0
+margin_right = 904.0
+margin_bottom = 2559.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cetrilan Botão" type="TextureButton" parent="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/2"]
+margin_left = 327.0
+margin_top = 687.0
+margin_right = 558.0
+margin_bottom = 964.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Produtos" type="Control" parent="CanvasLayer/SequenciaPeleOleosa"]
+margin_left = 903.0
+margin_right = 903.0
+margin_bottom = 1280.0
+
+[node name="Theracne" type="ScrollContainer" parent="CanvasLayer/SequenciaPeleOleosa/Produtos"]
+margin_right = 904.0
+margin_bottom = 1280.0
+theme = ExtResource( 18 )
+scroll_horizontal_enabled = false
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne"]
+margin_right = 904.0
+margin_bottom = 2559.0
+custom_constants/separation = -1
+
+[node name="1" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="TextureButton" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne/VBoxContainer/1"]
+margin_right = 119.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne/VBoxContainer"]
+margin_top = 1279.0
+margin_right = 904.0
+margin_bottom = 2559.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cetrilan" type="ScrollContainer" parent="CanvasLayer/SequenciaPeleOleosa/Produtos"]
+margin_right = 904.0
+margin_bottom = 1280.0
+theme = ExtResource( 18 )
+scroll_horizontal_enabled = false
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Cetrilan"]
+margin_right = 904.0
+margin_bottom = 2559.0
+custom_constants/separation = -1
+
+[node name="1" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Cetrilan/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="TextureButton" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Cetrilan/VBoxContainer/1"]
+margin_right = 119.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Cetrilan/VBoxContainer"]
+margin_top = 1279.0
+margin_right = 904.0
+margin_bottom = 2559.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Theracne Sabonete" type="ScrollContainer" parent="CanvasLayer/SequenciaPeleOleosa/Produtos"]
+margin_right = 904.0
+margin_bottom = 1280.0
+theme = ExtResource( 18 )
+scroll_horizontal_enabled = false
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne Sabonete"]
+margin_right = 904.0
+margin_bottom = 2559.0
+custom_constants/separation = -1
+
+[node name="1" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne Sabonete/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="TextureButton" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne Sabonete/VBoxContainer/1"]
+margin_right = 119.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne Sabonete/VBoxContainer"]
+margin_top = 1279.0
+margin_right = 904.0
+margin_bottom = 2559.0
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="CanvasLayer/SequenciaPeleOleosa"]
+
+[node name="SequenciaPeleSeca" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 868.0
+custom_constants/separation = -1
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resultado" type="ScrollContainer" parent="CanvasLayer/SequenciaPeleSeca"]
+margin_right = 904.0
+margin_bottom = 1280.0
+theme = ExtResource( 18 )
+scroll_horizontal_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SequenciaPeleSeca/Resultado"]
+margin_right = 904.0
+margin_bottom = 2559.0
+custom_constants/separation = -1
+
+[node name="1" type="TextureRect" parent="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Klavie Botão" type="TextureButton" parent="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/1"]
+margin_left = 349.0
+margin_top = 874.0
+margin_right = 535.0
+margin_bottom = 1151.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VoltarResultado" type="TextureButton" parent="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/1"]
+margin_right = 115.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer"]
+margin_top = 1279.0
+margin_right = 904.0
+margin_bottom = 2559.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cetrilan (Sequencia Pele Seca) Botão" type="TextureButton" parent="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/2"]
+margin_left = 327.0
+margin_top = 687.0
+margin_right = 558.0
+margin_bottom = 964.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Produtos" type="Control" parent="CanvasLayer/SequenciaPeleSeca"]
+margin_left = 903.0
+margin_right = 903.0
+margin_bottom = 1280.0
+
+[node name="Klavie" type="ScrollContainer" parent="CanvasLayer/SequenciaPeleSeca/Produtos"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 18 )
+scroll_horizontal_enabled = false
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Klavie"]
+margin_right = 904.0
+margin_bottom = 2559.0
+custom_constants/separation = -1
+
+[node name="1" type="TextureRect" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Klavie/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="TextureButton" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Klavie/VBoxContainer/1"]
+margin_right = 119.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Klavie/VBoxContainer"]
+margin_top = 1279.0
+margin_right = 904.0
+margin_bottom = 2559.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cetrilan (Sequencia Pele Seca)" type="ScrollContainer" parent="CanvasLayer/SequenciaPeleSeca/Produtos"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 18 )
+scroll_horizontal_enabled = false
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Cetrilan (Sequencia Pele Seca)"]
+margin_right = 904.0
+margin_bottom = 2559.0
+custom_constants/separation = -1
+
+[node name="1" type="TextureRect" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Cetrilan (Sequencia Pele Seca)/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="TextureButton" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Cetrilan (Sequencia Pele Seca)/VBoxContainer/1"]
+margin_right = 119.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="CanvasLayer/SequenciaPeleSeca/Produtos/Cetrilan (Sequencia Pele Seca)/VBoxContainer"]
+margin_top = 1279.0
+margin_right = 904.0
+margin_bottom = 2559.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="CanvasLayer/SequenciaPeleSeca"]
+
+[node name="SequenciaERRO" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Erro" type="TextureRect" parent="CanvasLayer/SequenciaERRO"]
+margin_right = 904.0
+margin_bottom = 1280.0
+texture = ExtResource( 12 )
+
+[node name="VoltarResultado" type="TextureButton" parent="CanvasLayer/SequenciaERRO/Erro"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="CanvasLayer/SequenciaERRO"]
+
+[connection signal="pressed" from="CanvasLayer/Inicio/IniciarBotão" to="CanvasLayer" method="_on_IniciarBoto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1/Theracne Gel Botão" to="CanvasLayer/SequenciaPeleOleosa" method="_on_Theracne_Gel_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1/Theracne Gel Botão" to="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne" method="_on_Theracne_Gel_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1/Theracne Sabonete Botão" to="CanvasLayer/SequenciaPeleOleosa" method="_on_Theracne_Sabonete_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1/Theracne Sabonete Botão" to="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne Sabonete" method="_on_Theracne_Sabonete_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/1/VoltarResultado" to="CanvasLayer/SequenciaPeleOleosa" method="_on_VoltarResultado_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/2/Cetrilan Botão" to="CanvasLayer/SequenciaPeleOleosa" method="_on_Cetrilan_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Resultado/VBoxContainer/2/Cetrilan Botão" to="CanvasLayer/SequenciaPeleOleosa/Produtos/Cetrilan" method="_on_Cetrilan_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne/VBoxContainer/1/Voltar" to="CanvasLayer/SequenciaPeleOleosa" method="_on_Voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Produtos/Cetrilan/VBoxContainer/1/Voltar" to="CanvasLayer/SequenciaPeleOleosa" method="_on_Voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleOleosa/Produtos/Theracne Sabonete/VBoxContainer/1/Voltar" to="CanvasLayer/SequenciaPeleOleosa" method="_on_Voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/1/Klavie Botão" to="CanvasLayer/SequenciaPeleSeca" method="_on_Klavie_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/1/Klavie Botão" to="CanvasLayer/SequenciaPeleSeca/Produtos/Klavie" method="_on_Klavie_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/1/VoltarResultado" to="CanvasLayer/SequenciaPeleSeca" method="_on_VoltarResultado_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/2/Cetrilan (Sequencia Pele Seca) Botão" to="CanvasLayer/SequenciaPeleSeca" method="_on_Cetrilan_Sequencia_Pele_Seca_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleSeca/Resultado/VBoxContainer/2/Cetrilan (Sequencia Pele Seca) Botão" to="CanvasLayer/SequenciaPeleSeca/Produtos/Cetrilan (Sequencia Pele Seca)" method="_on_Cetrilan_Sequencia_Pele_Seca_Boto_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleSeca/Produtos/Klavie/VBoxContainer/1/Voltar" to="CanvasLayer/SequenciaPeleSeca" method="_on_Voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaPeleSeca/Produtos/Cetrilan (Sequencia Pele Seca)/VBoxContainer/1/Voltar" to="CanvasLayer/SequenciaPeleSeca" method="_on_Voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/SequenciaERRO/Erro/VoltarResultado" to="CanvasLayer/SequenciaERRO" method="_on_VoltarResultado_pressed"]
